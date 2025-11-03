@@ -6,11 +6,13 @@ from customer
 group by gender;
 
 --Q2. Which customers used a discount but still spent more than the average purchase amount? 
+
 select customer_id, purchase_amount
 from customer
 where discount_applied = 'Yes' and purchase_amount >= (select AVG(purchase_amount) from customer);
 
 -- Q3. Which are the top 5 products with the highest average review rating?
+
 select item_purchased, ROUND(AVG(review_rating):: NUMERIC,2) as "Average product rating"
 from customer
 group by 1 
@@ -91,5 +93,6 @@ select age_group, ROUND(SUM(purchase_amount),2) as total_revenue
 from customer
 group by 1
 order by 2 desc;
+
 
 
