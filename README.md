@@ -1,1 +1,1 @@
-# customer-trends-data-analysis-Python-SQL-PowerBI
+# 🧠 Customer Behavior Analysis
